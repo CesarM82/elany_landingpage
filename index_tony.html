@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link href="assets/css/tony.css" rel="stylesheet" />
 </head>
-<body id="elany_body" style="display:flex">
+
+<body id="elany_body" style="display:none">
     <main id="main" class="main">
         <!-- Sidebar -->
         <div id="sidenav" class="sidenav">
@@ -178,8 +179,62 @@
                 </div>
             </div>
         </div>
+        <!-- Main page-->
+        <div id="main-content" class="main-content main-content-sm">
+            <button id="sidenav_toggle" type="button" class="menu-icon" onclick="toggleNavContent(this)">
+                <span class="menu-icon-line-1"></span>
+                <span class="menu-icon-line-2"></span>
+                <span class="menu-icon-line-3"></span>
+            </button>
 
+            <div class="container-fluid h-100">
+                <div class="d-flex flex-row flex-wrap">
+                    <div class="col-lg-12 col-md-12 col-12 homepage-title-col">
+                        <h2 class="homepage-title">Serving the Excess & Surplus Lines Broker Community for More Than 30 Years</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex flex-row flex-wrap homepage-wrap">
+                <div class="col-12 hompage=col">
+                    <div id="homepage_video_box" class="homepage-box">
+                        <div class="homepage-box-skrew homepage-box-skrew-1"></div>
+                        <div class="homepage-box-skrew homepage-box-skrew-2"></div>
+                        <div class="homepage-box-skrew homepage-box-skrew-3"></div>
+                        <div class="homepage-box-skrew homepage-box-skrew-4"></div>
+                        <div id="homepage_video_box_text" class="homepage-box-content">
+                            <p>Helping brokers Focus on What They Do best...</p>
+                            <p><span>Serve Their Clients</span></p>
+                        </div>
+                        <div id="homepage_video_box_video" class="homepage-box-video">
+                            <a href="javascript:void(0);" class="homepage-box-video">
+                                <img src="./assets/imgs/video-overlay.jpg" alt="">
+                            </a>
+                            <video controls loop muted id="homepage-video" class="video-container">
+                                <source src="./assets/videos/30.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
     </main>
+
+    <!--Footer-->
+    <footer id="footer" class="footer">
+        <div class="container-fluid">
+            <div class="d-flex flex-row flex-wrap">
+                <div class="col-12 text-right">
+                    <p>646.292.5500 | info@elany.org | elanyhelpdesk@elany.org</p>
+                    <p>120 Wall Street | 24th Floor | New York, NY 10005</p>
+                    <p><a href="#">Subscribe</a> | <a href="#">Unsubscribe</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -194,7 +249,57 @@
 
 
 <script>
-    
+    $(document).ready(function() {
+        var pagesetup = "rsb";
+        if(pagesetup == "rsb") {
+            $("#main").addClass("main-tree-cols");
+            $("#footer").hide();
+            $("#left_social").hide();
+        }else{
+            $("#right_sidebar").hide();
+        };
+
+        $("#elany_body").css("overflow", "hidden").show();
+        $("#elany_body").addClass("light-bridge");
+        $("#nav_home").addClass("sidenav-menu-item-active");
+
+        $(document).bind("wheel", function(e) {
+            showScroll();
+        });
+        $(document).click(function(e) {
+            showScroll();
+        });
+        $(document).keypress(function(e) {
+            showScroll();
+        });
+
+        if (is_touch_device == true){
+            showScroll();
+        }
+        var showScroll = function () {
+            if(showScroll.done) return;
+            $("#elany_body").css("overflow", "auto");
+            showScroll.done = true;
+        };
+        function is_touch_device() {
+            try {
+                document.createEvent("TouchEvent");
+                return true;
+            } catch(e) {
+                return false;
+            }
+        }
+    });
+
+    $(document).ready(function() {
+        $(document).on("click", ".homepage-video-overlay", function(e) {
+            e.preventDefault();
+            $(this).remove();
+            var homepageVideo = document.getElementById("homepage-video");
+            console.log("testvalue_______________________", homepageVideo);
+            homepageVideo.play();
+        });
+    });
 </script>
 
 </html>
