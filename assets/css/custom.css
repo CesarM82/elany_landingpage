@@ -122,4 +122,93 @@
     margin-right: 5px;
 }
 
+.sidenav-menu {
+    padding: 0px;
+    margin: 0 0 30px 0;
+    list-style: none;
+}
 
+.sidenav-menu li {
+    font-family: "Nimbus Sans TW01Con", sans-serif;
+    font-size: 16px;
+}
+
+.sidenav-menu li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.sidenav-menu-item {
+    position: relative;
+    display: block;
+    padding: 10px 30px 10px 10px;
+    color: #fff;
+    border: 2px solid rgba(107, 107, 107, .616);
+    transition: .3s;
+}
+
+.sidenav-menu-item-active {
+    border-color: #83c566;
+    background-color: #222;
+}
+
+.sidenav-menu-item:hover,
+.sidenav-menu-item:focus {
+    text-decoration: none;
+    background-color: #000;
+    color: #fff;
+}
+
+.sidenav-menu-sub-items {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border: 2px solid rgba(107, 107, 107, .616);
+    border-top: 0;
+}
+
+.sidenav-menu-sub-items li a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    transition: .3s;
+}
+
+.sidenav-menu-sub-items li a:hover,
+.sidenav-menu-sub-items li a:focus {
+    text-decoration: none;
+    background-color: #000;
+    color: #fff;
+}
+
+.sidenav-menu-item-more::after {
+    content: "\f078";
+    font-family: "FontAwesome";
+    position: absolute;
+    top: 22px;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 12px;
+}
+
+.sidenav-menu-item-more:not(.collapsed)::after {
+    content: "\f077";
+}
+
+.sidenav-search {
+    margin-bottom: 30px;
+}
+
+.btn-search {
+    background-color: #3ca23b;
+}
+
+.btn-border {
+    border-color: #3ca23b;
+}
+
+.events__details a {
+    color: #3ca23b;
+}
+
+/**Home page CSS**/

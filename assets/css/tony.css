@@ -1,1 +1,17 @@
-﻿
+﻿.list_th {
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+.skinny td {
+    padding: 2px;
+    margin: 0;
+}
+
+.sidenav-menu-sub-item-active {
+    text-decoration: none;
+    background-color: #000;
+    font-weight: bolder;
+    letter-spacing: 1.25px;
+    -webkit-font-smoothing: antialiased;
+}
