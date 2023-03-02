@@ -5,9 +5,139 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Elany</title>
-</head>
-<body id="elany_body" style="display:none">
 
+    <link rel="stylesheet" href="vendor/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/custom.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="assets/css/tony.css" rel="stylesheet" />
+</head>
+<body id="elany_body" style="display:flex">
+    <main id="main" class="main">
+        <div id="sidenav" class="sidenav">
+            <div class="logo-container">
+                <a href="">
+                    <img src="./assets/imgs/logo.png" class="logo img-fluid"/>
+                </a>
+            </div>
+            <ul id="left_social" class="social-media">
+                <li><a target="_blank" href="https://www.facebook.com/Elany-279002065462689/"><img src="./assets/imgs/icon-facebook.png" class="img-fluid" /></a></li>
+                <li><a target="_blank" href="https://www.linkedin.com/company/excesslineassociationofny/?viewAsMember=true"><img src="./assets/imgs/icon-linkedin.png" class="img-fluid" /></a></li>
+                <li><a target="_blank" href="https://twitter.com/excesslineny"><img src="./assets/imgs/icon-twitter.png" class="img-fluid" /></a></li>
+                <li><a target="_blank" href="mailto:elany@elany.org"><img src="./assets/imgs/icon-email.png" class="img-fluid" /></a></li>
+                <li><a target="_blank" href="tel:+1-646-292-5500"><img src="./assets/imgs/icon-phone.png" class="img-fluid" /></a></li>
+            </ul>
+            <ul class="sidenav-menu">
+                <li><a id="nav_home" href="default.aspx" class="sidenav-menu-item">Home</a></li>
+                <li>
+                    <a href="javascript:;" id="main_about" class="sidenav-menu-item sidenav-menu-item-more collapsed" data-toggle="collapse" data-target="#sub_about">About</a>
+                    <ul id="sub_about" class="sidenav-menu-items collapse">
+                        <li id="li_about"><a href="about.aspx" style=""> - About Us</a></li>
+                        <li id="li_contact"><a href="contact.aspx" style=""> - Contact Us</a></li>
+                        <li id="li_board"><a href="board.aspx" style=""> - Board of Directors</a></li>
+                        <li id="li_manual"><a href="maunal.aspx" style=""> - Procedures Manual</a></li>
+                        <li id="li_staff"><a href="staff.aspx" style=""> - Elany Staff</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#" id="nav_publications" class="sidenav-menu-item sidenav-menu-item-more collapsed a131_a100_a101_a103_a145_a401_a10_alist" data-toggle="collapse" data-target="#sub_publications">Publications</a>
+                    <ul id="sub_publications" class="sidenav-menu-sub-items collapse u131_u100_u101_u103_u145_u401_u10_ulist">
+                        <li id="li_131"><a href="items.aspx?id=s131" style="margin-left: 1em;"> - Annual Reports</a></li>
+                        <li id="li_100"><a href="items.aspx?id=s100" style="margin-left: 1em;"> - Bulletins</a></li>
+                        <li id="li_101"><a href="items.aspx?id=s101" style="margin-left: 1em;"> - Newsletter</a></li>
+                        <li id="li_103"><a href="items.aspx?id=s103" style="margin-left: 1em;"> - Compliance Advisor</a></li>
+                        <li id="li_145"><a href="items.aspx?id=s145" style="margin-left: 1em;"> - ELANY Ellaborates</a></li>
+                        <li id="li_401"><a href="items.aspx?id=s401" style="margin-left: 1em;"> - Video Library</a></li>
+                        <li id="li_10"><a href="items.aspx?c=10" style="margin-left: 1em;"> - Forms</a></li>
+                        <li><a target="_blank" href="https://eefs.elany.org/eefs/aff/PartCLicense.xhtml" style="margin-left: 1em;"> - Electronic Part C</a></li>
+                    </ul>
+                </li>
+
+                <li><a id="nav_elany_says" href="elany-says.aspx" class="sidenav-menu-item">ELANY Says</a></li>
+                <li>
+                    <a href="#" class="sidenav-menu-item sidenav-menu-item-more collapsed a1001_a1031_a1922_ulist" data-toggle="collapse" data-target="#sub-item-3">Coverage Codes</a>
+                    <ul id="sub-item-3" class="sidenav-menu-sub-items collapse u1001_u1031_u1922_ulist">
+                        <li id="li_1001"><a href="reports.aspx?id=r1001" style="margin-left: 1em;"> - Coverage Codes</a></li>
+                        <li id="li_1031"><a href="reports.aspx?id=r1031" style="margin-left: 1em;"> - Export List Codes</a></li>
+                        <li id="li_1922"><a href="reports.aspx?id=r1922" style="margin-left: 1em;"> - Insured Business Description Codes</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="sidenav-menu-item sidenav-menu-item-more collapsed" data-toggle="collapse" data-target="#sub-item-4">Electronico Filling Portal</a>
+                    <ul id="sub-item-t" class="sidenav-menu-items collapse">
+                        <li><a target="_blank" href="https://eefs.elany.org/eefs/" style="margin-left: 1em;"> - Registered User Login</a></li>
+                        <li><a href="items.aspx?c=10&n=1" style="margin-left: 1em;"> - To Register a New User/EFS Resource</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="sidenav-menu-item sidenav-menu-item-more collapsed a1_a1913_a1914_a1915_a1937_a1916_a1917_1008a_alist" data-toggle="collapse" data-target="#sub-item-5">Market Data</a>
+                    <ul id="sub-item-5" class="sidenav-menu-sub-items collapse u1_u1913_u1914_u1915_u1937_u1916_u1917_u1008a_alist">
+                        <li>
+                            <a href="#" class="sidenav-menu-item-more collapsed" data-toggle="collapse" data-target="#subsub-item-5-1" style="margin-left: 1em;"> - NY Premium & Transactions by RiskType</a>
+                            <ul id="subsub-item-5-1" class="sidenav-menu-sub-items collapse u1913_u1_ulist">
+                                <li id="li_1913"><a href="reports.aspx?id=r1913" style="margin-left: 2em;"> -- Summary Report</a></li>
+                                <li id="li_1"><a href="reports.aspx?id=r1" style="margin-left: 2em;"> -- Risk Type (SIC Codes) by Coverage Category</a></li>
+                            </ul>
+                        </li>
+                        <li id="li_1914"><a href="reports.aspx?id=r1914" style="margin-left: lem;"> - NY Premium by Coverage Category</a></li>
+                        <li id="li_1915"><a href="reports.aspx?id=r1915" style="margin-left: lem;"> - NY Statistics By Other Categories</a></li>
+                        <li id="li_1937"><a href="reports.aspx?id=r1937" style="margin-left: lem;"> - Wholesalers vs. Retailers Summary</a></li>
+                        <li>
+                            <a href="#" class="sidenav-menu-item-more collapsed" data-toggle="collapse" data-target="#subsub-item-5-2" style="margin-left: 1em;"> - NY Premium by Insurers</a>
+                            <ul id="subsub-item-5-2" class="sidenav-menu-sub-items collapse u1916_u1917_u1008a_ulist">
+                                <li id="li_1916"><a href="reports.aspx?id=r1916" style="margin-left: 2em;"> -- Top 10 Insurers</a></li>
+                                <li id="li_1917"><a href="reports.aspx?id=r1916" style="margin-left: 2em;"> -- Top 25 Insurance Groups</a></li>
+                                <li id="li_1008a"><a href="reports.aspx?id=r1916" style="margin-left: 2em;"> -- Premium by Each Foregin Insurers</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#" class="sidenav-menu-item sidenav-menu-item-more collapsed a1008_a1003_a1004_a1005_a1006_a1007_a2163_a2164_alist" data-toggle="collapse" data-target="#sub-item-6">NY E&S Insurer Reports</a>
+                    <ul id="sub-item-6" class="sidenav-menu-sub-items collapse u1008_u1003_u1004_u1005_u1006_u1007_u2163_u2164_ulist">
+                        <li>
+                            <a href="#" class="sidenav-menu-item-more collapsed" data-toggle="collapse" data-target="#subsub-item-6-1" style="margin-left: 1em;"> - NY E&S Insurers</a>
+                            <ul id="subsub-item-6-1" class="sidenav-menu-sub-items collapse u1008_u1003_u1004_ulist">
+                                <li id="li_1008"><a href="reports.aspx?id=r1008" style="margin-left: 2em;"> -- Foreign with Statistical Reports</a></li>
+                                <li id="li_1003"><a href="reports.aspx?id=r1003" style="margin-left: 2em;"> -- Alien</a></li>
+                                <li id="li_1004"><a href="reports.aspx?id=r1004" style="margin-left: 2em;"> -- LLoyd's Syndicates</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="sidenav-menu-item sidenav-menu-item-more collapsed" data-toggle="collapse" data-target="#sub-item-7">Cybersecurity Compliance</a>
+                    <ul id="sub-item-7" class="sidenav-menu-sub-items collapse">
+                        <li><a href="javascript:;" style="margin-left: 2em;" onclick="alert('under development');">CyberCompass</a></li>
+                        <li><a href="javascript:;" style="margin-left: 2em;" onclick="alert('under development');">CyberCompass FAQs</a></li>
+                        <li><a href="javascript:;" style="margin-left: 2em;" onclick="alert('under development');">CyberCompass Awareness Training</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" id="nav_statutes" class="sidenav-menu-item sidenav-menu-item-more collapsed a122_a123_alist" data-toggle="collapse" data-target="#sub_statutes">Statutes / Regulations</a>
+                    <ul id="sub_statutes" class="sidenav-menu-sub-items collapse u122_u123_ulist">
+                        <li id="li_123"><a href="items.aspx?id=s123" style="margin-left: 1em;">Statutes</a></li>
+                        <li id="li_122"><a href="items.aspx?id=s122" style="margin-left: 1em;">Regulations</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="sidenav-menu-item sidenav-menu-item-more collapsed a102_a102p_alist" data-toggle="collapse" data-target="#sub_calendar">Calendar of Events</a>
+                    <ul id="sub_calendar" class="sidenav-menu-sub-items collapse u102_u102P_ulist">
+                        <li id="li_102"><a href="calendar.aspx" style="margin-left: 1em;">Upcoming Events</a></li>
+                        <li id="li_102p"><a href="calendar.aspx?m=p" style="margin-left: 1em;">Past Events</a></li>
+                    </ul>
+                </li>
+                <li><a href="items.sapx?id=c11" class="sidenav-menu-item all_alist">Hyperlinks</a></li>
+            </ul>
+
+            <div>
+
+            </div>
+        </div>
+
+    </main>
 
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -18,7 +148,7 @@
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
 <script src="vendor/js/bootstrap.min.js"></script>
-<script src="assets/js/sidenav.js"></script>
+<!-- <script src="assets/js/sidenav.js"></script> -->
 
 
 <script>
