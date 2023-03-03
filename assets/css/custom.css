@@ -1,7 +1,7 @@
 .homepage-wrap {
-    position: absolute;
+    position: relative;
     right: 0;
-    bottom: 100px;
+    top: 100px;
 }
 
 .main {
@@ -213,7 +213,6 @@
 
 /**Home page CSS**/
 .homepage-title {
-    margin-bottom: 120px;
     color: #fff;
     font-style: italic;
     font-size: 26px;
@@ -245,6 +244,38 @@
     100% {opacity: 1;}
 }
 
+.homepage-box-skrew {
+    position: absolute;
+    z-index: 10;
+    background: url('../imgs/skrew.png');
+    width: 15px;
+    height: 15px;
+}
+
+.homepage-box-skrew-1 {
+    top: 5px;
+    left: 5px;
+}
+
+.homepage-box-skrew-2 {
+    top: 5px;
+    right: 5px;
+}
+
+.homepage-box-skrew-3 {
+    bottom: 5px;
+    left: 5px;
+}
+
+.homepage-box-skrew-4 {
+    bottom: 5px;
+    right: 5px;
+}
+
+.homepage-box-skrew-1 {
+    top: 5px;
+    left: 5px;
+}
 
 
 .hompage-box-content {
@@ -307,8 +338,170 @@
     color: #fff;
 }
 
+.homepage-news-item {
+    margin-left: auto;
+    margin-bottom: 60px;
+    max-width: 300px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.homepage-news-item-img {
+    flex: 0 0 30px;
+    max-width: 30px;
+}
+
+.homepage-news-item-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+.homepage-news-item-text {
+    flex: 0 0 calc(100% - 30px);
+    max-width: calc(100% - 30px);
+    padding-left: 15px;
+}
+
+.homepage-news-item-title {
+    margin-bottom: 30px;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.homepage-news-item-link {
+    text-align: right;
+    font-size: 10px;
+}
+
+.homepage-news-item-link a {
+    color: #04c803;
+    text-decoration: underline;
+}
+
+.main-three-cols .main-content {
+    flex: 0 0 calc(100% - 540px);
+    max-width: calc(100% - 540px);
+}
+
+.main-three-cols .sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    flex: 0 0 240px;
+    max-width: 240px;
+    padding: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 2;
+}
+
+.main-three-cols .sidebar .slide-right {
+    right: 0;
+}
+
+.main-three-cols  .sidebar .sidebar-social-media {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 6;
+    margin: auto;
+}
+
+.main-three-cols  .sidebar .sidebar-footer {
+    margin-top: auto;
+    text-align: center;
+}
+
+.social-media-vertical li {
+    display: block;
+}
+
+.social-media-vertical  li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.main-three-cols .sidebar .sidebar-footer p {
+    font-size: 14px;
+    color: #fff;
+}
+
+.main-three-cols .sidebar .sidebar-footer a {
+    color: #3ca23b;
+}
+
+.main-three-cols .sidebar .sidebar-footer a:hover {
+    text-decoration: none;
+}
+
+
 /* Responsive css*/
+@media(max-width: 1200px) {
+    .homepage-title-col {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .homepage-col {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media(max-width: 991px) {
+    .sidenav {
+        position: absolute;
+        left: -300px;
+        z-index: 100;
+    }
+
+    .sidenav-opened {
+        left:0;
+    }
+
+    .main-content {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-left: 0;
+    }
+    .main-content .menu-icon {
+        left: 30px;
+        z-index: 101;
+    }
+
+    .main-content-full .menu-icon {
+        left: 250px;
+    }
+
+    .homepage-col {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-left: 0;
+    }
+
+    .homepage-title br {
+        display: none;
+    }
+
+    .video-library-grid-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+}
+
+
 @media(max-width: 767px) {
+    .homepage-box {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
     .hompage-box-content {
         flex: 0 0 100%;
         text-align: center;
@@ -320,4 +513,248 @@
         flex: 0 0 100%;
         max-width: 100%;
     }
+
 } 
+/*Board css*/
+
+.single-board-member {
+    margin-bottom: 60px;
+}
+.board-member-name {
+    margin: 0 0 10px 0;
+}
+
+.board-member-role {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 1.4em;
+    color: #04c803;
+}
+
+.board-member-company {
+    margin: 0 0 30px 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.board-member-text p, span {
+    margin: 0 0 15px 0;
+    font-size: 20px;
+    color: #fff;
+}
+
+.board-member-text a {
+    text-decoration: underline;
+    color: #04c803;
+}
+
+.board-member-text a:hover {
+    color: #fff;
+}
+
+/*Toggle*/
+
+.toggle-actions {
+    margin-bottom: 30px;
+}
+
+.toggle-actions .btn:first-child {
+    margin-right: 30px;
+}
+
+.toggle-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.toggle-list li {
+    color: #fff;
+}
+
+.toggle-list-group-heading {
+    font-size: 16px;
+    color: #fff;
+}
+
+.toggle-list li a {
+    position: relative;
+    color: #04c803;
+}
+
+.toggle-list ol li {
+    padding: 0 0 0 30px;
+    margin: 0;
+}
+
+.toggle-list-main-group-item::after {
+    content: "fo78";
+    font-family: "FontAwesome";
+    position: absolute;
+    top: 50%;
+    right: -22px;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: #04c803;
+}
+
+.toggle-list-main-group-item:not(.collapsed)::after {
+    content: "f077";
+}
+
+.toggle-list-embed li {
+    padding: 0 0 0 30px;
+    font-size: 14px;
+}
+
+/*Form  Custome CSS*/
+
+.form-field-group {
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 30px;
+}
+
+.form-field-label {
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding-right: 15px;
+    color: #fff;
+    text-align: right;
+}
+
+.form-field-label .form-field-required {
+    color: #dc3545;
+}
+
+.form-field-input, .form-field-label-checkbox {
+    flex: 0 0 75%;
+    max-width: 75%;
+    padding-left: 15px;
+}
+
+.form-field-input input {
+    width: 100%;
+    height: 48px;
+    padding: 0 15px;
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: rgba(0,0,0, .774);
+}
+
+.form-field-input textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: rgba(0,0,0, .774);
+}
+
+.form-field-input input:focus {
+    outline: 0;
+}
+
+.form-field-label-checkbox:hover {
+    cursor: pointer;
+}
+
+.form-field-error-message {
+    font-size: 12px;
+    color: #ff283d;
+}
+
+.form-field-group-error .form-field-input input,
+.form-field-group-error .form-field-input textarea {
+    border-color: #ff283d;
+}
+
+/*Video*/
+.video-button,
+.video-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    --video-width: 80vw;
+    width: var(--video-width);
+    height: calc(var(--video-width) / 1.77);
+}
+  
+
+.video-button {
+    cursor: pointer;
+    clip-path: polygon(30% 20%, 70% 20%, 70% 80%, 30% 80%);
+    transition: 0.6s cubic-bezier(0.6, 0, 0.4, 1);
+}
+  
+.video-button[data-aperture="open"] {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+ 
+.video-container {
+    overflow: hidden
+}
+
+.actual-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.6s linear;
+    transform: scale(1);
+}
+.actual-video[data-aperture="open"] {
+    transform: scale(1.2);
+}
+  
+.play-button__aperture--left {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.9);
+    transition: 0.5s 0.1s cubic-bezier(0.6, 0, 0.4, 1);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0% 0%, 40% 0%, 40% 100%, 0% 100%);
+}
+.play-button__aperture--left[data-aperture="open"] {
+    transition-delay: 0s;
+    clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+}
+
+.play-button__aperture--top-right {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.9);
+    transition: 0.5s 0.1s cubic-bezier(0.6, 0, 0.4, 1);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 80%);
+}
+
+.play-button__aperture--top-right[data-aperture="open"] {
+    transition-delay: 0s;
+    clip-path: polygon(100% 0%, 100% 0%, 100% 0%);
+}
+
+.play-button__aperture--bottom-right {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.9);
+    transition: 0.5s 0.1s cubic-bezier(0.6, 0, 0.4, 1);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0% 100%, 100% 100%, 100% 20%);
+}
+.play-button__aperture--bottom-right[data-aperture="open"] {
+    transition-delay: 0s;
+    clip-path: polygon(100% 100%, 100% 100%, 100% 100%);
+}
